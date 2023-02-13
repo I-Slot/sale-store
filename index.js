@@ -38,9 +38,11 @@ container.addEventListener('click', function(e){
     document.getElementById(e.target.id).parentElement.classList.remove('on-offer')
 })
 
-clearBtn.addEventListener('click', function(){
+clearBtn.addEventListener('click', function () {
+    
     const productsArray = document.getElementsByClassName('product')
     for (let product of productsArray){
         product.classList.remove('purchased')
+        product.classList.add('on-offer')
     }
 })
